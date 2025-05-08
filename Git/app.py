@@ -1,2 +1,7 @@
-def read_rot():
-    return {'message': ola mundo!}
+from fastapi import FastAPI
+
+app = FastAPI()
+
+@app.get('/')
+def read_root():
+return {'message': 'Olá mundo!'}
